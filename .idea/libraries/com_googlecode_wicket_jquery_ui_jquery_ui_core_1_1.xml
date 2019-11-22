@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="com.googlecode.wicket-jquery-ui:jquery-ui-core:1.1" type="repository">
+    <properties maven-id="com.googlecode.wicket-jquery-ui:jquery-ui-core:1.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/wicket-jquery-ui/jquery-ui-core/1.1/jquery-ui-core-1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
