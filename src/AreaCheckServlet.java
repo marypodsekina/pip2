@@ -21,10 +21,10 @@ public class AreaCheckServlet extends HttpServlet {
         BigDecimal r = new BigDecimal(req.getParameter("R"));
 
         int time;
-        try{
+        try {
             time = Integer.parseInt(req.getParameter("offset"));
-        }catch (NumberFormatException e){
-            time=0;
+        } catch (NumberFormatException e) {
+            time = 0;
         }
 //        if (((y>=0)&&(x<=0)&&(y<=r)&&(x>=-r))||(((pow(x,2)+pow(y,2))<=pow(r,2))&&(x>=0)&&(y<=0))||((x>=0)&&(y>=0)&&(y<=(r-x)))){
 //            PrintWriter writer = resp.getWriter();
@@ -35,12 +35,13 @@ public class AreaCheckServlet extends HttpServlet {
 //            writer.write("Промах");
 //        }
 
-        UserHistory history = (UserHistory)req.getSession().getAttribute("history");
+        UserHistory history = (UserHistory) this.getServletContext().getAttribute("history");
         PointBean pointBean = new PointBean(x, y, r, time);
-        history.getListOfPoint().add(pointBean); //сформировали новую точку и поместили ее в историю
+        history.addPoint(pointBean); //сформировали новую точку и поместили ее в историю
 //        System.out.println(x+" "+y+" "+r);
 //        System.out.println("hello");
         PrintWriter writer = resp.getWriter();
+        resp.setContentType("text/json; charset=UTF-8");
         writer.println("{\"x\": " + pointBean.getX() + ", \"y\": " + pointBean.getY() + ", \"r\": " + pointBean.getR() + ", \"isInArea\": \"" + pointBean.isInArea() + "\", \"time\": \"" + pointBean.getDate() + "\"}");
 //        } else if (req.getParameter("type") != null && req.getParameter("type").equals("ajax-no-cache")) {
 //            resp.setContentType("text/json; charset=UTF-8");

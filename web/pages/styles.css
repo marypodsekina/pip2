@@ -1,62 +1,71 @@
-body{
+body {
     /*background: url("5.jpg");*/
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
-p:first-letter{
+
+p:first-letter {
     color: aquamarine;
 }
-#header{
+
+#header {
     background-color: mediumseagreen;
-    height:70px;
+    height: 70px;
     font: 120% monospace;
     color: #003d66;
     padding: 10px;
 }
+
 /*#results{*/
-    /*height: 200px;*/
-    /*weigth: 50%;*/
+/*height: 200px;*/
+/*weigth: 50%;*/
 /*}*/
-#changes{
+#changes {
     float: left;
     padding-top: 70px;
     padding-right: 20px;
     margin-left: 10px;
 }
-#graf{
+
+#graf {
     float: left;
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 10px;
 }
-#grafic{
-    border:1px black solid;
-    width:300px;
-    height:300px;
+
+#grafic {
+    border: 1px black solid;
+    width: 300px;
+    height: 300px;
     background-color: white;
     margin-right: 10px;
 
 }
 
-#smth{
+#smth {
     display: inline-block;
 }
-path{
-    fill:#0489B1;
+
+path {
+    fill: #0489B1;
     opacity: 0.7;
 }
-line{
+
+line {
     stroke: black;
 }
-input{
+
+input {
     margin-left: 10px;
 }
-#content{
+
+#content {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: rgba(255,254,249,0.75);
-    padding: 20px ;
+    background-color: rgba(255, 254, 249, 0.75);
+    padding: 20px;
     margin-left: 20%;
     margin-right: 20%;
     height: auto;
@@ -64,16 +73,23 @@ input{
     /*display: block;*/
 }
 
-#results{
+#results {
     float: left;
     margin-left: 15%;
     margin-top: 10px;
 }
 
-#mine::first-line{
+#mine::first-line {
     color: aquamarine;
     font-size: large;
 }
-.button:hover{
+
+.button:hover {
     background-color: coral;
+}
+table{
+    border: solid 1px;
+}
+th, td{
+    border: 1px black solid;
 }
